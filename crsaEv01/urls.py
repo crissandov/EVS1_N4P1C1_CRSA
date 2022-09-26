@@ -15,12 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from crsaApp1 import views
+
+from crsaApp1 import views as v1
+from crsaApp2 import views as v2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('vista1/',views.vista1),
-    path('vista2/',views.vista2),
+    path('vista1/',v1.vista1),
+    path('vista2/',v1.vista2),
+
+
+
+
+    path('admin/', admin.site.urls),
+    path('vista3/',v2.vista3),
+    path('vista4/',v2.vista4),
+
 ]
 
 
